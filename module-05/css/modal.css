@@ -1,0 +1,43 @@
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: calc(50vw - 25vw/2);
+    top: calc(50vh - 60vh/2 + 5vh);
+    width: 25%;
+    height: 60%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    animation: showModal 700ms ease 1000ms ;
+    animation-fill-mode: backwards;
+}
+
+.close {
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+
+.close > * {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.close use:hover,
+.close use:focus {
+    fill: #2196F3;
+    cursor: pointer;
+}
+
+@keyframes showModal {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
